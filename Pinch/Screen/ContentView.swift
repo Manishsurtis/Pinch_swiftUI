@@ -32,6 +32,7 @@ struct ContentView: View {
                                 imageScale = 1
                             }
                         }
+                        
                     }
                 
             } // ZSTACK
