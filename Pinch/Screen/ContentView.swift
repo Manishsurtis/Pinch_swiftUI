@@ -12,6 +12,15 @@ struct ContentView: View {
     @State private var isAnimating : Bool = false
     @State private var imageScale : CGFloat = 1
     @State private var imageOffset : CGSize = .zero
+    
+    func resetImageState(){
+        return withAnimation(.spring()){
+            imageScale = 1
+            imageOffset = .zero
+        }
+    }
+    
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -31,7 +40,7 @@ struct ContentView: View {
                             }
                         }else{
                             withAnimation(.spring()){
-                                imageScale = 1
+                               resetImageState()
                             }
                         }
                         
